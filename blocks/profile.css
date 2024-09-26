@@ -1,0 +1,49 @@
+.profile {
+    display: flex;
+    padding: 34px 0 20px;
+    border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
+}
+
+.profile__avatar {
+    margin-right: 20px;
+    border-radius: 25px;
+}
+
+.profile__column {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile__name {
+    margin: 0 0 12px;
+}
+
+.profile__description {
+    margin: 0;
+    font: "Poppins", sans-serif;
+}
+
+.profile__edit-button {
+    margin-top: auto;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.profile__add-button {
+    margin-top: auto;
+    margin-left: auto;
+    border-radius: 8px;
+    background-color: #212121;
+    text-decoration-color: #fff;
+    gap: 8px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 18px 32px;
+    border-radius: 8px;
+}
