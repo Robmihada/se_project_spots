@@ -5,8 +5,10 @@
 }
 
 .profile__avatar {
+    height: 190px;
+    width: 190px;
     margin-right: 20px;
-    border-radius: 25px;
+    border-radius: 8px;
 }
 
 .profile__column {
@@ -16,11 +18,17 @@
 
 .profile__name {
     margin: 0 0 12px;
+    font-weight: 500;
+    line-height: 1;
+    font-size: 32px;
 }
 
 .profile__description {
     margin: 0;
-    font: "Poppins", sans-serif;
+   font-weight: 500;
+   line-height: 1;
+   font-size: 16px;
+   opacity: 70%;
 }
 
 .profile__edit-button {
@@ -30,6 +38,10 @@
     display: flex;
     gap: 5px;
     align-items: center;
+    opacity: 70%;
+    font-weight: 500;
+    line-height: 1;
+    font-size: 16px;
 }
 
 .profile__add-button {
@@ -46,4 +58,45 @@
     color: white;
     padding: 18px 32px;
     border-radius: 8px;
+    font-weight: 500;
+    line-height: 1;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 627px) {
+    .profile {
+        flex-direction: column;
+        max-width: 288px;
+        align-items: center;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .profile__avatar {
+        margin: 0 0 12px;
+        height: 80px;
+        width: 80px;
+    }
+
+    .profile__column {
+        margin: 0 0 20px;
+    }
+
+    .profile__name {
+        font-size: 20px;
+        margin: 0 0 6px;
+    }
+
+    .profile__description {
+        margin: 0 0 32px;
+    }
+
+    .profile__add-button {
+        margin: 0;
+       width: 100%;
+    }
+
+    .profile__edit-button {
+        margin: auto;
+    }
 }
