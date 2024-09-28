@@ -9,6 +9,7 @@
     width: 190px;
     margin-right: 20px;
     border-radius: 8px;
+    object-fit: cover;
 }
 
 .profile__column {
@@ -102,22 +103,27 @@
 
     .profile__column {
         margin: 0 0 20px;
+        justify-content: center;
     }
 
     .profile__name {
         font-size: 20px;
         margin: 0 0 6px;
         max-width: 288px;
+        font-size: 20px;
     }
 
     .profile__description {
-        margin: 0 0 32px;
+        margin: 6px 0 32px;
         max-width: 288px;
     }
 
     .profile__add-button {
-        margin: 0;
+        margin: 20px 0 0;
        width: 100%;
+       padding: 0;
+       justify-content: center;
+       height: 52px;
     }
 
     .profile__edit-button {
