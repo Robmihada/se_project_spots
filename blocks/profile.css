@@ -18,6 +18,7 @@
 }
 
 .profile__name {
+    color: #212121;
     margin: 0 0 12px;
     font-weight: 500;
     line-height: 1;
@@ -35,6 +36,7 @@
    font-weight: 500;
    line-height: 1;
    font-size: 16px;
+   color: #212121;
    opacity: 70%;
    text-overflow: ellipsis;
   overflow: hidden;
@@ -51,6 +53,7 @@
     display: flex;
     gap: 5px;
     align-items: center;
+    color: #212121;
     opacity: 70%;
     font-weight: 500;
     line-height: 1;
@@ -73,8 +76,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #fcf5e5;
     padding: 18px 32px;
+    border-bottom: 0;
     border-radius: 8px;
     font-weight: 500;
     line-height: 1;
@@ -110,7 +114,6 @@
         font-size: 20px;
         margin: 0 0 6px;
         max-width: 288px;
-        font-size: 20px;
     }
 
     .profile__description {
@@ -123,7 +126,6 @@
        width: 100%;
        padding: 0;
        justify-content: center;
-       height: 52px;
     }
 
     .profile__edit-button {
