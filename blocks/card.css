@@ -39,10 +39,8 @@
     font-size: 20px;
     text-overflow: ellipsis;
   overflow: hidden;
-  display: nowrap;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  max-width: 413px;
+  text-wrap: nowrap;
+  max-width: 390px;
 }
 
 @media screen and (max-width: 627px) {
@@ -52,7 +50,7 @@
 
 .card__title {
     font-size: 16px;
-    max-width: 288px;
+    max-width: 268px;
     line-height: 1;
     padding: 0 0 2px;
 }
