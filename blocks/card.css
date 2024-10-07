@@ -39,7 +39,7 @@
     font-size: 20px;
     text-overflow: ellipsis;
   overflow: hidden;
-  text-wrap: nowrap;
+  white-space: nowrap;
   max-width: 390px;
 }
 
@@ -50,7 +50,7 @@
 
 .card__title {
     font-size: 16px;
-    max-width: 268px;
+    max-width: 95px;
     line-height: 1;
     padding: 0 0 2px;
 }
