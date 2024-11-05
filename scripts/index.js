@@ -9,11 +9,20 @@ const initialCards = [
 
 const profileEditButton = document.querySelector(".profile__edit-button");
 
-const editModal = document.querySelector("#edit-modal");
+const profileName = document.querySelector(".profile__name");
 
+const profileDescription = document.querySelector(".profile__description");
+
+const editModal = document.querySelector("#edit-modal");
+const editFormElement = editModal.querySelector(".modal__form");
 const editModalCloseButton = editModal.querySelector(".modal__close-button");
 
+const editModalNameInput = editModal.querySelector("#profile-name-input");
+const editModalDesriptionInput = editModal.querySelector("#profile-description-input")
+
 function openModal(){
+  editModalNameInput.value = profileName.textContent;
+  editModalDesriptionInput.value = profileDescription.textContent;
   editModal.classList.add("modal__opened");
 }
 
@@ -21,6 +30,14 @@ function closeModal(){
   editModal.classList.remove("modal__opened");
 }
 
+function handleEditFormSubmit(evt) {
+  evt.preventDefault();
+  profileName.textContent = editModalNameInput.value;
+  profileDescription.textContent = editModalDesriptionInput.value;
+  closeModal();
+}
+
 profileEditButton.addEventListener("click", openModal);
 
 editModalCloseButton.addEventListener("click", closeModal);
+editFormElement.addEventListener("submit", handleEditFormSubmit);
