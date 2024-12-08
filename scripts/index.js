@@ -7,11 +7,13 @@ const initialCards = [
   { name: "Mountain house", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg"},
 ];
 
+//Profile elements
 const profileEditButton = document.querySelector(".profile__edit-button");
-const cardModalButton = document.querySelector(".profile__new-post-button");
+const cardModalButton = document.querySelector(".profile__add-button");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 
+//Form elements
 const editModal = document.querySelector("#edit-modal");
 const editFormElement = editModal.querySelector(".modal__form");
 const editModalCloseButton = editModal.querySelector(".modal__close-button");
@@ -21,8 +23,10 @@ const editModalDesriptionInput = editModal.querySelector("#profile-description-i
 const cardModal = document.querySelector("#add-card-modal");
 const cardModalCloseButton = cardModal.querySelector(".modal__close-button");
 
+//Card related elements
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
+
 function getCardElement(data) {
 const cardElement = cardTemplate.content
 .querySelector(".card")
