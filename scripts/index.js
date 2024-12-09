@@ -30,31 +30,6 @@ const cardLinkInput = cardModal.querySelector("#add-card-link-input");
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
-function openModal(modal){
-  modal.classList.add("modal_opened");
-}
-
-function closeModal(modal){
-  modal.classList.remove("modal_opened");
-}
-
-
-function handleEditFormSubmit(evt) {
-  evt.preventDefault();
-  profileName.textContent = editModalNameInput.value;
-  profileDescription.textContent = editModalDesriptionInput.value;
-  closeModal(editModal);
-}
-
-function handleAddCardSubmit(evt) {
-  evt.preventDefault;
-  const inputValues = { name: "cardNameInput.value", link: "cardLinkInput.value"};
-  const cardElement =getCardElement(inputValues);
-  cardsList.prepend(cardElement);
-
-  closeModal(cardForm);
-}
-
 function getCardElement(data) {
   const cardElement = cardTemplate.content
   .querySelector(".card")
@@ -62,7 +37,7 @@ function getCardElement(data) {
   const cardNameEl = cardElement.querySelector(".card__title");
   const cardImage = cardElement.querySelector(".card__image");
   const cardLikeButton = cardElement.querySelector(".card__like-button");
-//TODO select the delete button
+  const cardDeleteButton = cardElement.querySelector(".card__delete-button");
 
 
   cardNameEl.textContent = data.name;
@@ -73,10 +48,36 @@ function getCardElement(data) {
   cardLikeButton.classList.toggle("card__like-button_liked");
   });
 
-  //TODO set the listener for the delete button
-  //the handler should remove the card from the DOM
+  cardDeleteButton.addEventListener("click", () => {
+  cardElement.remove();
+  });
 
   return cardElement;
+  }
+
+  function openModal(modal){
+    modal.classList.add("modal_opened");
+  }
+
+  function closeModal(modal){
+    modal.classList.remove("modal_opened");
+  }
+
+  function handleEditFormSubmit(evt) {
+    evt.preventDefault();
+    profileName.textContent = editModalNameInput.value;
+    profileDescription.textContent = editModalDesriptionInput.value;
+    closeModal(editModal);
+  }
+
+  function handleAddCardSubmit(evt) {
+    evt.preventDefault;
+    const inputValues = { name: "cardNameInput.value", link: "cardLinkInput.value"};
+    const cardElement =getCardElement(inputValues);
+    cardsList.prepend(cardElement);
+    cardForm.requestFullscreen();
+    closeModal(cardModal);
+    closeModal(cardForm);
   }
 
 profileEditButton.addEventListener("click", () => {
