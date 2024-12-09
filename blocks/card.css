@@ -31,6 +31,15 @@
   opacity: 100%;
 }
 
+.card__like-button_liked {
+background-image: url("../images/liked-icon.png");
+opacity: 1;
+}
+
+.card__like-button_liked:hover {
+background-image: url("../images/liked-hover.png");
+}
+
 .card__title {
   font-weight: 500;
   line-height: 1.2;

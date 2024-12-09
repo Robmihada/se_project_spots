@@ -61,10 +61,20 @@ function getCardElement(data) {
   .cloneNode(true);
   const cardNameEl = cardElement.querySelector(".card__title");
   const cardImage = cardElement.querySelector(".card__image");
+  const cardLikeButton = cardElement.querySelector(".card__like-button");
+//TODO select the delete button
+
 
   cardNameEl.textContent = data.name;
   cardImage.src = data.link;
   cardImage.alt = data.name;
+
+  cardLikeButton.addEventListener("click", () => {
+  cardLikeButton.classList.toggle("card__like-button_liked");
+  });
+
+  //TODO set the listener for the delete button
+  //the handler should remove the card from the DOM
 
   return cardElement;
   }
