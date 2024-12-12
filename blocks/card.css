@@ -1,5 +1,6 @@
 .card {
   max-width: 413px;
+  position: relative;
 }
 
 .card__image {
@@ -25,7 +26,7 @@
   height: 15px;
   background-repeat: no-repeat;
   border: none;
-  background-size: 12px 15px;
+  background-size: contain;
   border-radius: 50%;
   width: 32px;
   height: 32px;
@@ -35,8 +36,7 @@
 }
 
 .card__delete-button:hover {
-  cursor: pointer;
-  opacity: 100%;
+  background-color: #ff6565;
 }
 
 .card__like-button {
