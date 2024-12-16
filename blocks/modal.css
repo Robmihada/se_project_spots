@@ -33,6 +33,9 @@ padding: 0;
 
 .modal__image {
   width: 100%;
+  object-fit: contain;
+  max-width: 80vw;
+  max-height: 8vh;
 }
 
 .modal__close-button {
