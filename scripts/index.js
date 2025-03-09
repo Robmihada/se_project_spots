@@ -138,3 +138,24 @@ initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
 });
+
+function handleEscape(evt) {
+  if (evt.key === "Escape") {
+    const openedPopup = document.querySelector(".modal_opened");
+    closeModal(openedPopup);
+  }
+}
+
+//Close modal when clicking outside modal or modal close buttons:
+const modals = document.querySelectorAll(".modal");
+
+modals.forEach((modal) => {
+  modal.addEventListener("click", (evt) => {
+    if (
+      evt.target.classList.contains("modal") ||
+      evt.target.classList.contains("modal__button-close")
+    ) {
+      closeModal(modal);
+    }
+  });
+});
