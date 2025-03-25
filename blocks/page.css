@@ -1,7 +1,6 @@
 .page {
   background-color: #fcf5e5;
   height: 100%;
-  padding: 0 80px 60px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
   align-content: center;
@@ -13,9 +12,6 @@
 }
 
 @media screen and (max-width: 488px) {
-  .page {
-    padding: 0 20px 60px;
-  }
 
   .page__section {
     width: 100%;
